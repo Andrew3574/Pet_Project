@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\images\\gastrofest.png",
+      "PackagePath": "staticwebassets\\images\\gastrofest.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.EventsAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.EventsAPI.props",
+      "PackagePath": "build\\EventsAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.EventsAPI.props",
+      "PackagePath": "buildMultiTargeting\\EventsAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.EventsAPI.props",
+      "PackagePath": "buildTransitive\\EventsAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

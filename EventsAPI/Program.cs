@@ -1,3 +1,6 @@
+using EventsAPI.Models;
+using EventsAPI.Repositories;
+using EventsAPI.Services;
 using EventsAPI.Utility;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,6 +17,10 @@ builder.Services.AddControllers()
     });
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<GuestsRepository>();
+builder.Services.AddScoped<EventsRepository>();
+builder.Services.AddScoped<SharedEventsGuestsRepository>();
+builder.Services.AddScoped<EmailService>();
 
 var app = builder.Build();
 

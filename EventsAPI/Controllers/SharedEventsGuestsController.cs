@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EventsAPI.Models;
 using EventsAPI.Utility;
+using EventsAPI.Repositories;
 
 namespace EventsAPI.Controllers
 {
@@ -14,63 +15,44 @@ namespace EventsAPI.Controllers
     [ApiController]
     public class SharedEventsGuestsController : ControllerBase
     {
-        private readonly EventsDbContext _context;
+        private readonly SharedEventsGuestsRepository _sharedEventsGuestsRepository;
 
-        public SharedEventsGuestsController(EventsDbContext context)
+        public SharedEventsGuestsController(SharedEventsGuestsRepository sharedEventsGuestsRepository)
         {
-            _context = context;
+            _sharedEventsGuestsRepository = sharedEventsGuestsRepository;
         }
 
         // GET: api/SharedEventsGuests
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SharedEventsGuest>>> GetSharedEventsGuests()
         {
-            return await _context.SharedEventsGuests.ToListAsync();
+            var objList = await _sharedEventsGuestsRepository.GetAll();
+            return Ok(objList);
         }
 
         // GET: api/SharedEventsGuests/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SharedEventsGuest>> GetSharedEventsGuest(int id)
         {
-            var sharedEventsGuest = await _context.SharedEventsGuests.FindAsync(id);
-
-            if (sharedEventsGuest == null)
+            var sharedEventsGuest = await _sharedEventsGuestsRepository.GetById(id);
+            if(sharedEventsGuest == null)
             {
                 return NotFound();
             }
-
-            return sharedEventsGuest;
+            return Ok(sharedEventsGuest);           
         }
 
         // PUT: api/SharedEventsGuests/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSharedEventsGuest(int id, SharedEventsGuest sharedEventsGuest)
+        public async Task<IActionResult> PutSharedEventsGuest(SharedEventsGuest sharedEventsGuest)
         {
-            if (id != sharedEventsGuest.Id)
+            if(sharedEventsGuest == null)
             {
                 return BadRequest();
             }
-
-            _context.Entry(sharedEventsGuest).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SharedEventsGuestExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            await _sharedEventsGuestsRepository.Update(sharedEventsGuest);
+            return Ok();
         }
 
         // POST: api/SharedEventsGuests
@@ -78,31 +60,18 @@ namespace EventsAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<SharedEventsGuest>> PostSharedEventsGuest(SharedEventsGuest sharedEventsGuest)
         {
-            _context.SharedEventsGuests.Add(sharedEventsGuest);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetSharedEventsGuest", new { id = sharedEventsGuest.Id }, sharedEventsGuest);
+            await _sharedEventsGuestsRepository.Create(sharedEventsGuest);
+            return Ok();
         }
 
         // DELETE: api/SharedEventsGuests/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteSharedEventsGuest(int id)
         {
-            var sharedEventsGuest = await _context.SharedEventsGuests.FindAsync(id);
-            if (sharedEventsGuest == null)
-            {
-                return NotFound();
-            }
-
-            _context.SharedEventsGuests.Remove(sharedEventsGuest);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
+            var sharedEventsGuest = await _sharedEventsGuestsRepository.GetById(id);
+            await _sharedEventsGuestsRepository.Delete(sharedEventsGuest);
+            return Ok();
         }
 
-        private bool SharedEventsGuestExists(int id)
-        {
-            return _context.SharedEventsGuests.Any(e => e.Id == id);
-        }
     }
 }

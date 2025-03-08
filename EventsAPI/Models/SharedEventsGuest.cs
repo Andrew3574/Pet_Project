@@ -11,6 +11,8 @@ public partial class SharedEventsGuest
 
     public Guid? GuestId { get; set; }
 
+    public DateTime? RegistrationDate { get; set; }
+
     public virtual Event? Event { get; set; }
 
     public virtual Guest? Guest { get; set; }

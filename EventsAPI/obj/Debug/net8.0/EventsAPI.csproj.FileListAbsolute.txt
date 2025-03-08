@@ -253,3 +253,8 @@ D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\Castle.Core.dll
 D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Proxies.dll
 D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\EventsAPI.staticwebassets.runtime.json
+D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\MailKit.dll
+D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\MimeKit.dll
+D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\3course\TestProject\EventsAPI\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

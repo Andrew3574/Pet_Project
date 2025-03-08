@@ -13,8 +13,6 @@ public partial class Guest
 
     public DateOnly BirthDate { get; set; }
 
-    public DateTime? RegistrationDate { get; set; }
-
     public string Email { get; set; } = null!;
 
     public virtual ICollection<SharedEventsGuest> SharedEventsGuests { get; set; } = new List<SharedEventsGuest>();

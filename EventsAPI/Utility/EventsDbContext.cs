@@ -101,9 +101,6 @@ public partial class EventsDbContext : DbContext
             entity.Property(e => e.Name)
                 .HasMaxLength(256)
                 .HasColumnName("name");
-            entity.Property(e => e.RegistrationDate)
-                .HasDefaultValueSql("CURRENT_TIMESTAMP")
-                .HasColumnName("registration_date");
             entity.Property(e => e.Surname)
                 .HasMaxLength(256)
                 .HasColumnName("surname");
@@ -128,6 +125,9 @@ public partial class EventsDbContext : DbContext
                 .HasForeignKey(d => d.GuestId)
                 .OnDelete(DeleteBehavior.Cascade)
                 .HasConstraintName("shared_events_guests_guest_id_fkey");
+            entity.Property(e => e.RegistrationDate)
+               .HasDefaultValueSql("CURRENT_TIMESTAMP")
+               .HasColumnName("registration_date");
         });
 
         OnModelCreatingPartial(modelBuilder);

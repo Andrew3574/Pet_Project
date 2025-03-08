@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EventsAPI.Models;
 using EventsAPI.Utility;
+using EventsAPI.Repositories;
 
 namespace EventsAPI.Controllers
 {
@@ -14,63 +15,48 @@ namespace EventsAPI.Controllers
     [ApiController]
     public class GuestsController : ControllerBase
     {
-        private readonly EventsDbContext _context;
+        private readonly GuestsRepository _guestsRepository;
 
-        public GuestsController(EventsDbContext context)
+        public GuestsController(GuestsRepository guestsRepository)
         {
-            _context = context;
+            _guestsRepository = guestsRepository;
         }
 
         // GET: api/Guests
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Guest>>> GetGuests()
         {
-            return await _context.Guests.ToListAsync();
+            var events = await _guestsRepository.GetAll();
+            return Ok(events);
         }
 
         // GET: api/Guests/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Guest>> GetGuest(Guid id)
         {
-            var guest = await _context.Guests.FindAsync(id);
+            var guest = await _guestsRepository.GetById(id);
 
             if (guest == null)
             {
                 return NotFound();
             }
 
-            return guest;
+            return Ok(guest);
         }
 
         // PUT: api/Guests/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGuest(Guid id, Guest guest)
+        public async Task<IActionResult> PutGuest(Guest guest)
         {
-            if (id != guest.GuestId)
+            if(guest == null)
             {
                 return BadRequest();
             }
 
-            _context.Entry(guest).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!GuestExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            await _guestsRepository.Update(guest);
+            return Ok();
+            
         }
 
         // POST: api/Guests
@@ -78,31 +64,22 @@ namespace EventsAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Guest>> PostGuest(Guest guest)
         {
-            _context.Guests.Add(guest);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetGuest", new { id = guest.GuestId }, guest);
+            await _guestsRepository.Create(guest);
+            return Ok();
         }
 
         // DELETE: api/Guests/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGuest(Guid id)
         {
-            var guest = await _context.Guests.FindAsync(id);
+            var guest = await _guestsRepository.GetById(id);
             if (guest == null)
             {
                 return NotFound();
             }
 
-            _context.Guests.Remove(guest);
-            await _context.SaveChangesAsync();
-
-            return NoContent();
-        }
-
-        private bool GuestExists(Guid id)
-        {
-            return _context.Guests.Any(e => e.GuestId == id);
+            await _guestsRepository.Delete(guest);
+            return Ok();
         }
     }
 }

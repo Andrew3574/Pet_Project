@@ -1,5 +1,58 @@
 [
   {
+    "ContainingType": "EventsAPI.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/Account/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "code",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventsAPI.Controllers.AccountController",
+    "Method": "Register",
+    "RelativePath": "api/Account/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EventsAPI.Models.RegisterModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventsAPI.Controllers.AccountController",
+    "Method": "RequestConfirmationCode",
+    "RelativePath": "api/Account/request_code",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EventsAPI.Controllers.EventsController",
     "Method": "GetEvents",
     "RelativePath": "api/Events",
@@ -9,7 +62,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventsAPI.Models.Event, EventsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.Event, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -29,13 +82,13 @@
     "Parameters": [
       {
         "Name": "event",
-        "Type": "EventsAPI.Models.Event",
+        "Type": "Models.Event",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.Event",
+        "Type": "Models.Event",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +114,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.Event",
+        "Type": "Models.Event",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -81,7 +134,7 @@
     "Parameters": [
       {
         "Name": "event",
-        "Type": "EventsAPI.Models.Event",
+        "Type": "Models.Event",
         "IsRequired": true
       },
       {
@@ -124,7 +177,27 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventsAPI.Models.Event, EventsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.Event, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "EventsAPI.Controllers.EventsController",
+    "Method": "GetEventsAdminOnly",
+    "RelativePath": "api/Events/eventsAdminOnly",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.Event, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -160,7 +233,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventsAPI.Models.Event, EventsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.Event, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -180,7 +253,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventsAPI.Models.Guest, EventsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.Guest, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -200,13 +273,13 @@
     "Parameters": [
       {
         "Name": "guest",
-        "Type": "EventsAPI.Models.Guest",
+        "Type": "Models.Guest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.Guest",
+        "Type": "Models.Guest",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -232,7 +305,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.Guest",
+        "Type": "Models.Guest",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -252,7 +325,7 @@
     "Parameters": [
       {
         "Name": "guest",
-        "Type": "EventsAPI.Models.Guest",
+        "Type": "Models.Guest",
         "IsRequired": true
       },
       {
@@ -289,7 +362,7 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[EventsAPI.Models.SharedEventsGuest, EventsAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Models.SharedEventsGuest, Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -309,13 +382,13 @@
     "Parameters": [
       {
         "Name": "sharedEventsGuest",
-        "Type": "EventsAPI.Models.SharedEventsGuest",
+        "Type": "Models.SharedEventsGuest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.SharedEventsGuest",
+        "Type": "Models.SharedEventsGuest",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -341,7 +414,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "EventsAPI.Models.SharedEventsGuest",
+        "Type": "Models.SharedEventsGuest",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -361,7 +434,7 @@
     "Parameters": [
       {
         "Name": "sharedEventsGuest",
-        "Type": "EventsAPI.Models.SharedEventsGuest",
+        "Type": "Models.SharedEventsGuest",
         "IsRequired": true
       },
       {

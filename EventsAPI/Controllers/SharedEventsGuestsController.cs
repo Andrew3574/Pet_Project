@@ -5,9 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EventsAPI.Models;
-using EventsAPI.Utility;
-using EventsAPI.Repositories;
+using Models;
+using Repositories;
 
 namespace EventsAPI.Controllers
 {

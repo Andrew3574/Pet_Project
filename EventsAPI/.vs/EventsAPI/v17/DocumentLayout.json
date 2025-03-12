@@ -3,72 +3,39 @@
   "WorkspaceRootPath": "D:\\3course\\TestProject\\EventsAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\events\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\events\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\utility\\eventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:utility\\eventsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\events\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\models\\sharedeventsguest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:models\\sharedeventsguest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\models\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:models\\guest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\services\\jwtauthenticationattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:services\\jwtauthenticationattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\repositories\\sharedeventsguestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:repositories\\sharedeventsguestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:models\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\events\\eventsadminonly.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\controllers\\sharedeventsguestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:controllers\\sharedeventsguestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:services\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\repositories\\eventsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:repositories\\eventsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\controllers\\guestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:controllers\\guestscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\repositories\\guestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:repositories\\guestsrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:repositories\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|d:\\3course\\testproject\\eventsapi\\eventsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
-      "RelativeMoniker": "D:0:0:{F7449AAD-D8C8-4BE4-B415-EA6EC786958A}|EventsAPI.csproj|solutionrelative:eventsapi.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+      "AbsoluteMoniker": "D:0:0:{CDB2DF1C-3D78-45AA-BB4F-B38BC58B1E1C}|..\\WebClient\\WebClient.csproj|d:\\3course\\testproject\\webclient\\views\\events\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,143 +44,35 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 312,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAABgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T07:15:53.243Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "EventsController.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\EventsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\EventsController.cs",
-              "RelativeToolTip": "Controllers\\EventsController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAgwEcAAAAiAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "..\\WebClient\\Controllers\\EventsController.cs",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "..\\WebClient\\Controllers\\EventsController.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAMwFQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:04:42.721Z",
+              "WhenOpened": "2025-03-12T14:39:58.536Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "Services\\EmailService.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Services\\EmailService.cs",
-              "RelativeToolTip": "Services\\EmailService.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBMAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "JwtAuthenticationAttribute.cs",
+              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Services\\JwtAuthenticationAttribute.cs",
+              "RelativeDocumentMoniker": "Services\\JwtAuthenticationAttribute.cs",
+              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Services\\JwtAuthenticationAttribute.cs",
+              "RelativeToolTip": "Services\\JwtAuthenticationAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T19:19:18.718Z",
+              "WhenOpened": "2025-03-12T18:10:23.494Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "EventsRepository.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\EventsRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\EventsRepository.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\EventsRepository.cs",
-              "RelativeToolTip": "Repositories\\EventsRepository.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAswFoAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T16:30:46.312Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "GuestsRepository.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\GuestsRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\GuestsRepository.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\GuestsRepository.cs",
-              "RelativeToolTip": "Repositories\\GuestsRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T16:02:41.339Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GuestsController.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\GuestsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GuestsController.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\GuestsController.cs",
-              "RelativeToolTip": "Controllers\\GuestsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:05:18.345Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventsDbContext.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Utility\\EventsDbContext.cs",
-              "RelativeDocumentMoniker": "Utility\\EventsDbContext.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Utility\\EventsDbContext.cs",
-              "RelativeToolTip": "Utility\\EventsDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:33:56.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Guest.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Models\\Guest.cs",
-              "RelativeDocumentMoniker": "Models\\Guest.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Models\\Guest.cs",
-              "RelativeToolTip": "Models\\Guest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:04:52.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SharedEventsGuest.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Models\\SharedEventsGuest.cs",
-              "RelativeDocumentMoniker": "Models\\SharedEventsGuest.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Models\\SharedEventsGuest.cs",
-              "RelativeToolTip": "Models\\SharedEventsGuest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T20:04:46.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IMessageService.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Services\\IMessageService.cs",
-              "RelativeDocumentMoniker": "Services\\IMessageService.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Services\\IMessageService.cs",
-              "RelativeToolTip": "Services\\IMessageService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAABKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T19:18:32.749Z",
               "EditorCaption": ""
             },
             {
@@ -234,101 +93,89 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:40:46.612Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "SharedEventsGuestsRepository.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\SharedEventsGuestsRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\SharedEventsGuestsRepository.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\SharedEventsGuestsRepository.cs",
-              "RelativeToolTip": "Repositories\\SharedEventsGuestsRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T17:03:37.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\IRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\IRepository.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Repositories\\IRepository.cs",
-              "RelativeToolTip": "Repositories\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T15:53:37.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Properties\\launchSettings.json",
-              "ViewState": "AgIAAAIAAAAAAAAAAABRwCMAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-07T17:44:55.839Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "EventsAPI.http",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\EventsAPI.http",
-              "RelativeDocumentMoniker": "EventsAPI.http",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\EventsAPI.http",
-              "RelativeToolTip": "EventsAPI.http",
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-03-07T16:30:42.588Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Category.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Models\\Category.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Models\\Category.cs",
-              "RelativeToolTip": "Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:36:37.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Event.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Models\\Event.cs",
-              "RelativeDocumentMoniker": "Models\\Event.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Models\\Event.cs",
-              "RelativeToolTip": "Models\\Event.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:36:30.163Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:40:45.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "SharedEventsGuestsController.cs",
-              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\SharedEventsGuestsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SharedEventsGuestsController.cs",
-              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\SharedEventsGuestsController.cs",
-              "RelativeToolTip": "Controllers\\SharedEventsGuestsController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAEkAAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Program.cs",
+              "RelativeDocumentMoniker": "..\\WebClient\\Program.cs",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Program.cs",
+              "RelativeToolTip": "..\\WebClient\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T09:06:15.084Z",
+              "WhenOpened": "2025-03-12T18:20:30.708Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Events\\Index.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Index.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Events\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:05:52.56Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventsAdminOnly.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\EventsAdminOnly.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Events\\EventsAdminOnly.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\EventsAdminOnly.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Events\\EventsAdminOnly.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:05:41.739Z",
               "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 1428,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 392,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EventsController.cs",
+              "ToolTip": "D:\\3course\\TestProject\\EventsAPI\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "Controllers\\EventsController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwCcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:02:32.347Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -340,6 +187,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Create.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Events\\Create.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Create.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Events\\Create.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAwAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:47:40.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Events\\Edit.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Edit.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Events\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:50:14.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Delete.cshtml",
+              "RelativeDocumentMoniker": "..\\WebClient\\Views\\Events\\Delete.cshtml",
+              "ToolTip": "D:\\3course\\TestProject\\WebClient\\Views\\Events\\Delete.cshtml",
+              "RelativeToolTip": "..\\WebClient\\Views\\Events\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:42:52.239Z",
+              "EditorCaption": ""
             }
           ]
         }

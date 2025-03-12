@@ -1,6 +1,11 @@
 --create extension if not exists "uuid-ossp" schema "public";
 --select uuid_generate_v4();
 
+create table Roles(
+	role_id serial primary key,
+	name varchar(256) not null
+);
+
 create table Categories(
 	category_id serial primary key,
 	name varchar(256) not null
@@ -19,6 +24,7 @@ create table Events(
 
 create table Guests(
 	guest_id uuid primary key default uuid_generate_v4(),
+	role_id int references Roles(role_id) on delete restrict,
 	name varchar(256) not null,
 	surname varchar(256) not null,
 	birth_date date not null,

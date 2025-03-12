@@ -5,15 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using EventsAPI.Models;
-using EventsAPI.Utility;
-using EventsAPI.Repositories;
+using Models;
+using Repositories;
 using EventsAPI.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace EventsAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
     public class EventsController : ControllerBase
     {
         private readonly EventsRepository _eventsRepository;
@@ -29,14 +30,24 @@ namespace EventsAPI.Controllers
 
         // GET: api/Events
         [HttpGet]
+        [AllowAnonymous]
         public async Task<ActionResult<IEnumerable<Event>>> GetEvents()
         {
             var events = await _eventsRepository.GetAll();
             return Ok(events);
         }
 
+        /*[JwtAuthentication("admin")]*/
+        [HttpGet("eventsAdminOnly")]
+        public async Task<ActionResult<IEnumerable<Event>>> GetEventsAdminOnly()
+        {
+            var events = await _eventsRepository.GetAll();
+            return Ok(events);
+        }
+
         // GET: api/Events/3073c69d-4977-4b5a-a8b4-bc8c9e47a7bd
-        [HttpGet("{id:Guid}")]
+
+        [HttpGet("{id:guid}")]
         public async Task<ActionResult<Event>> GetEventById(Guid id)
         {
             var @event = await _eventsRepository.GetById(id);
@@ -77,6 +88,8 @@ namespace EventsAPI.Controllers
         // PUT: api/Events/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+
+        /*[JwtAuthentication("admin")]*/
         public async Task<IActionResult> PutEvent(Event @event)
         {
             await _eventsRepository.Update(@event);
@@ -92,6 +105,8 @@ namespace EventsAPI.Controllers
         // POST: api/Events
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+
+        /*[JwtAuthentication("admin")]*/
         public async Task<ActionResult<Event>> PostEvent(Event @event)
         {
             await _eventsRepository.Create(@event);
@@ -100,6 +115,8 @@ namespace EventsAPI.Controllers
 
         // DELETE: api/Events/5
         [HttpDelete("{id}")]
+
+        /*[JwtAuthentication("admin")]*/
         public async Task<IActionResult> DeleteEvent(Guid id)
         {
             var @event = await _eventsRepository.GetById(id);

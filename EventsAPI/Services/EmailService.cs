@@ -12,7 +12,7 @@ namespace EventsAPI.Services
             using var emailMessage = new MimeMessage();
 
             emailMessage.From.Add(new MailboxAddress("Администрация сайта мероприятий", "7heproffi123@gmail.com"));
-            emailMessage.To.Add(new MailboxAddress("test", email));
+            emailMessage.To.Add(new MailboxAddress("", email));
             emailMessage.Subject = subject;
             emailMessage.Body = new TextPart("plain")
             {

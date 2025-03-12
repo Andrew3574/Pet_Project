@@ -1,26 +1,64 @@
-using EventsAPI.Models;
-using EventsAPI.Repositories;
+using EventsAPI.Middlewares;
+using Models;
+using Repositories;
 using EventsAPI.Services;
-using EventsAPI.Utility;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using EventsAPI.ModelProfiles;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-// Add services to the container.
-
 builder.Services.AddDbContext<EventsDbContext>();
 builder.Services.AddControllers()
-    .AddJsonOptions(options =>
+   .AddJsonOptions(options =>
+   {
+       options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+   });
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
     {
-        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            // указывает, будет ли валидироваться издатель при валидации токена
+            ValidateIssuer = false,
+            // строка, представляющая издателя
+            ValidIssuer = "MyAuthServer",
+            // будет ли валидироваться потребитель токена
+            ValidateAudience = false,
+            // установка потребителя токена,обычно - название сайта
+            ValidAudience = "MyAuthClient",
+            // будет ли валидироваться время существования
+            ValidateLifetime = true,
+            // установка ключа безопасности
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("mysupersecret_secretsecretsecretkey!123")),
+            // валидация ключа безопасности
+            ValidateIssuerSigningKey = true,
+
+            //RoleClaimType
+        };
     });
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.WithOrigins("https://localhost:7070")
+            .AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowCredentials();
+        });
+});
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddMemoryCache();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<GuestsRepository>();
 builder.Services.AddScoped<EventsRepository>();
 builder.Services.AddScoped<SharedEventsGuestsRepository>();
 builder.Services.AddScoped<EmailService>();
+builder.Services.AddAutoMapper(typeof(GuestProfile));
 
 var app = builder.Build();
 
@@ -30,7 +68,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowAll");
+app.UseExceptionHandlerMiddleware();
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

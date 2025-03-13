@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\images\\default.png",
+      "PackagePath": "staticwebassets\\images\\default.png"
+    },
+    {
       "Id": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\images\\gastrofest.png",
       "PackagePath": "staticwebassets\\images\\gastrofest.png"
     },

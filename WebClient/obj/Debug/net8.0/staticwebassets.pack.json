@@ -13,8 +13,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\3course\\TestProject\\WebClient\\wwwroot\\images\\gastrofest.png",
-      "PackagePath": "staticwebassets\\images\\gastrofest.png"
+      "Id": "D:\\3course\\TestProject\\WebClient\\wwwroot\\images\\default.png",
+      "PackagePath": "staticwebassets\\images\\default.png"
     },
     {
       "Id": "D:\\3course\\TestProject\\WebClient\\wwwroot\\js\\site.js",

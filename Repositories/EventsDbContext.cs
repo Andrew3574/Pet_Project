@@ -32,8 +32,7 @@ public partial class EventsDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if (!optionsBuilder.IsConfigured)
-        {
+        
             _connectionString = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
@@ -42,7 +41,7 @@ public partial class EventsDbContext : DbContext
 
             optionsBuilder.UseLazyLoadingProxies();
             optionsBuilder.UseNpgsql(_connectionString);
-        }
+        
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

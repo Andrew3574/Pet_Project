@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jzPB5BEjDDvV9sFzpuib6w/u4EgHMAhfhzgZ3h8xATU=",
+  "Hash": "wZLPZnxs0M3a/l3cQh884QaPG+smjadTiBdWt158LYw=",
   "Source": "EventsAPI",
   "BasePath": "_content/EventsAPI",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\images\\default.png",
+      "SourceId": "EventsAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\",
+      "BasePath": "_content/EventsAPI",
+      "RelativePath": "images/default.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default.png"
+    },
     {
       "Identity": "D:\\3course\\TestProject\\EventsAPI\\wwwroot\\images\\gastrofest.png",
       "SourceId": "EventsAPI",

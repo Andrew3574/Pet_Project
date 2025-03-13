@@ -28,7 +28,7 @@ create table Guests(
 	name varchar(256) not null,
 	surname varchar(256) not null,
 	birth_date date not null,
-	email varchar(256) not null
+	email varchar(256) unique not null
 );
 
 create table Shared_Events_Guests(

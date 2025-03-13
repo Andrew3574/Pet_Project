@@ -6,12 +6,13 @@
 
 <h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
             </th>
@@ -28,10 +29,7 @@
                 @Html.DisplayNameFor(model => model.GuestLimit)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
+                @Html.DisplayNameFor(model => model.Category.Name)
             </th>
             <th></th>
         </tr>
@@ -40,6 +38,10 @@
         @foreach (var item in Model)
         {
             <tr>
+                <td>
+                    <img style="width:200px;height:200px;" alt="Image not found" src="@Html.DisplayFor(modelItem => item.Image)" />
+
+                </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
@@ -54,9 +56,6 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.GuestLimit)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Image)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Category.Name)

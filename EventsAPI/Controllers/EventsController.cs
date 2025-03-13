@@ -37,7 +37,7 @@ namespace EventsAPI.Controllers
             return Ok(events);
         }
 
-        /*[JwtAuthentication("admin")]*/
+        [JwtAuthentication("admin")]
         [HttpGet("eventsAdminOnly")]
         public async Task<ActionResult<IEnumerable<Event>>> GetEventsAdminOnly()
         {
@@ -87,12 +87,12 @@ namespace EventsAPI.Controllers
 
         // PUT: api/Events/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-
-        /*[JwtAuthentication("admin")]*/
+        [HttpPut]
+        [JwtAuthentication("admin")]
         public async Task<IActionResult> PutEvent(Event @event)
         {
             await _eventsRepository.Update(@event);
+
 
             var sharedEventsGuests = _sharedEventsGuest.GetAll().Result.Where(sh => sh.EventId == @event.EventId);
             foreach(var sh in sharedEventsGuests)
@@ -104,9 +104,9 @@ namespace EventsAPI.Controllers
 
         // POST: api/Events
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
 
-        /*[JwtAuthentication("admin")]*/
+        [JwtAuthentication("admin")]
+        [HttpPost]
         public async Task<ActionResult<Event>> PostEvent(Event @event)
         {
             await _eventsRepository.Create(@event);
@@ -114,9 +114,8 @@ namespace EventsAPI.Controllers
         }
 
         // DELETE: api/Events/5
-        [HttpDelete("{id}")]
-
-        /*[JwtAuthentication("admin")]*/
+        [HttpDelete("{id:guid}")]
+        [JwtAuthentication("admin")]
         public async Task<IActionResult> DeleteEvent(Guid id)
         {
             var @event = await _eventsRepository.GetById(id);

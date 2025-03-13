@@ -25,12 +25,28 @@ namespace WebClient.Controllers
         }
         // GET: Event
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string name="",string location="",string date="")
         {
+            List<Event> events = new List<Event>();
 
-            var events = await _httpClient.GetFromJsonAsync<List<Event>>("https://localhost:7034/api/Events");
+            
+            if (!string.IsNullOrEmpty(location) || !string.IsNullOrEmpty(date))
+            {
+                events = await _httpClient.GetFromJsonAsync<List<Event>>($"https://localhost:7034/api/Events/search?date={date}&location={location}");
+            }
+            else
+            {
+                events = await _httpClient.GetFromJsonAsync<List<Event>>("https://localhost:7034/api/Events");
+                                
+            }
+            if (!string.IsNullOrEmpty(name))
+            {
+                events = await _httpClient.GetFromJsonAsync<List<Event>>($"https://localhost:7034/api/Events/{name}");
+            }
             return View(events);
         }
+
+
 
         public async Task<IActionResult> EventsAdminOnly()
         {
@@ -57,51 +73,39 @@ namespace WebClient.Controllers
         }
 
 
-        public IActionResult Delete()
+        public async Task<IActionResult> Delete(Guid? id)
         {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Delete(Event @event)
-        {
-            if (@event == null)
-            {
-                return NotFound();
-            }
             if (ModelState.IsValid)
             {
 
-                await _httpClient.PostAsJsonAsync($"https://localhost:7034/api/Events/DeleteEvent", @event.EventId);
-
-                return RedirectToAction("EventsAdminOnly", "Events");
+                var response = await _httpClient.DeleteAsync($"https://localhost:7034/api/Events/{id}");
+                if (response.IsSuccessStatusCode)
+                {
+                    return RedirectToAction("EventsAdminOnly", "Events");
+                }
             }
-
-            return View(@event);
+            
+            return View();
 
         }
 
         public IActionResult Create()
         {
-            ViewData["CategoryId"] = "1";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(Event @event)
         {
-            if (@event == null)
-            {
-                return NotFound();
-            }
             if (ModelState.IsValid)
-            {
-                var response = await _httpClient.PostAsJsonAsync($"https://localhost:7034/api/Events/PostEvent", @event);
+            { 
+                var response = await _httpClient.PostAsJsonAsync($"https://localhost:7034/api/Events", @event);
                 if (response.IsSuccessStatusCode)
                 {
                     return RedirectToAction("EventsAdminOnly", "Events");
                 }
-            }
+            }            
+
             return View(@event);
         }
 
@@ -114,13 +118,9 @@ namespace WebClient.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(Event @event)
         {
-            if (@event == null)
-            {
-                return NotFound();
-            }
             if (ModelState.IsValid)
             {
-                await _httpClient.PostAsJsonAsync($"https://localhost:7034/api/Events/PutEvent", @event);
+                await _httpClient.PutAsJsonAsync($"https://localhost:7034/api/Events", @event);
 
                 return RedirectToAction("EventsAdminOnly", "Events");
             }

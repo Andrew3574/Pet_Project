@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zhs3LLNc1qLmpjgcnE2fRexWDg9t6eAsIfGpqle0FU0=",
+  "Hash": "RSOvdI/BVBsX1CtQzn4Yq4l6OHSYVNz/KZ0t/IN/sKc=",
   "Source": "WebClient",
   "BasePath": "_content/WebClient",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\3course\\TestProject\\WebClient\\wwwroot\\images\\gastrofest.png",
+      "Identity": "D:\\3course\\TestProject\\WebClient\\wwwroot\\images\\default.png",
       "SourceId": "WebClient",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\3course\\TestProject\\WebClient\\wwwroot\\",
       "BasePath": "_content/WebClient",
-      "RelativePath": "images/gastrofest.png",
+      "RelativePath": "images/default.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\gastrofest.png"
+      "OriginalItemSpec": "wwwroot\\images\\default.png"
     },
     {
       "Identity": "D:\\3course\\TestProject\\WebClient\\wwwroot\\js\\site.js",

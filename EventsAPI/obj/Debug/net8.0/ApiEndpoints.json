@@ -74,6 +74,22 @@
   },
   {
     "ContainingType": "EventsAPI.Controllers.EventsController",
+    "Method": "PutEvent",
+    "RelativePath": "api/Events",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "event",
+        "Type": "Models.Event",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EventsAPI.Controllers.EventsController",
     "Method": "PostEvent",
     "RelativePath": "api/Events",
     "HttpMethod": "POST",
@@ -123,27 +139,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "EventsAPI.Controllers.EventsController",
-    "Method": "PutEvent",
-    "RelativePath": "api/Events/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "event",
-        "Type": "Models.Event",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "EventsAPI.Controllers.EventsController",

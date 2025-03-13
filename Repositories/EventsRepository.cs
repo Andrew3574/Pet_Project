@@ -15,12 +15,17 @@ namespace Repositories
         {
             try
             {
+                if(entity == null)
+                {
+                    return;
+                }                
                 await _dbContext.Events.AddAsync(entity);
                 await _dbContext.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                var innerex = ex.InnerException;
+                string msg = ex.Message;
                 throw;
             }
         }
@@ -32,9 +37,9 @@ namespace Repositories
                 _dbContext.Events.Remove(entity);
                 await _dbContext.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                var inex = ex.InnerException;
                 throw;
             }
         }
@@ -43,7 +48,7 @@ namespace Repositories
         {
             try
             {
-                var events = await _dbContext.Events.ToListAsync();
+                var events = await _dbContext.Events.Include(e=>e.Category).ToListAsync();
                 return events;
             }
             catch (Exception)
@@ -103,11 +108,11 @@ namespace Repositories
                 {
                     queryEvents = queryEvents.Where(e => e.EventDate.ToUniversalTime().Date == date.ToUniversalTime().Date);
                 }
-                if (location != string.Empty)
+                if (!string.IsNullOrEmpty(location))
                 {
                     queryEvents = queryEvents.Where(e => e.Location.Contains(location));
                 }
-                if (category != string.Empty)
+                if (!string.IsNullOrEmpty(category))
                 {
                     queryEvents = queryEvents.Where(e => e.Category.Name.Contains(category));
                 }

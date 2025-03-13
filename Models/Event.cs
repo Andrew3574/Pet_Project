@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace Models;
@@ -12,6 +14,7 @@ public partial class Event
 
     public string? Description { get; set; }
 
+    [Column(TypeName = "timestamp without time zone")]
     public DateTime EventDate { get; set; }
 
     public string Location { get; set; } = null!;

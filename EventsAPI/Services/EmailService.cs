@@ -23,7 +23,7 @@ namespace EventsAPI.Services
             {
                 try
                 {
-                    await client.ConnectAsync("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+                    await client.ConnectAsync("smtp.gmail.com", 465, MailKit.Security.SecureSocketOptions.SslOnConnect);
                     await client.AuthenticateAsync("7heproffi123@gmail.com", "boxx dwli imfh zkwq");
                     await client.SendAsync(emailMessage);
                 }

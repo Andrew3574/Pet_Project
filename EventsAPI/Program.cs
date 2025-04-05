@@ -7,6 +7,9 @@ using Microsoft.EntityFrameworkCore;
 using EventsAPI.ModelProfiles;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using FluentValidation;
+using EventsAPI.Validators;
+using EventsAPI.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -43,6 +46,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddMemoryCache();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<IValidator<RegisterModel>,RegisterModelValidator>();
 builder.Services.AddScoped<GuestsRepository>();
 builder.Services.AddScoped<EventsRepository>();
 builder.Services.AddScoped<SharedEventsGuestsRepository>();

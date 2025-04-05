@@ -5,7 +5,7 @@ namespace Models;
 
 public partial class Guest
 {
-    public Guid GuestId { get; set; }
+    public Guid GuestId { get; set; } 
 
     public int Role_id { get; set; }
 

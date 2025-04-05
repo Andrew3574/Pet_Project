@@ -74,14 +74,8 @@ namespace EventsAPI.Controllers
         [HttpGet("search")]
         public async Task<ActionResult<IEnumerable<Event>>> GetEventByCriteria(string date = "", string location = "", string category = "")
         {
-           DateTime dateTime;
-           DateTime.TryParse(date, out dateTime);
-
-           var events = await _eventsRepository.GetEventByCriteria(dateTime, location, category);
-           if (!events.Any())
-           {
-                return NotFound();
-           }
+           var events = await _eventsRepository.GetEventByCriteria(date, location, category);
+           
            return Ok(events);
         }
 

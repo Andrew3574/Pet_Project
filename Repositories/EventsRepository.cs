@@ -89,7 +89,10 @@ namespace Repositories
         {
             try
             {
-                var events = await _dbContext.Events.Where(e => e.Name.Contains(name)).ToListAsync();
+                /*
+                var events = await _dbContext.Events.Where(e => e.Name.Contains(name, StringComparison.CurrentCultureIgnoreCase)).ToListAsync();
+                 */
+                var events = await _dbContext.Events.Where(e => e.Name.ToUpper().Contains(name.ToUpper())).ToListAsync();
                 return events;
             }
             catch (Exception)
@@ -98,28 +101,27 @@ namespace Repositories
                 throw;
             }
         }
-        public async Task<IEnumerable<Event>> GetEventByCriteria(DateTime date, string location, string category)
+        public async Task<IEnumerable<Event>> GetEventByCriteria(string inputDate, string location, string category)
         {
             try
             {
                 var queryEvents = _dbContext.Events.AsQueryable();
 
-                if (date > DateTime.MinValue && date < DateTime.MaxValue)
+                if (DateOnly.TryParse(inputDate, out var date))
                 {
-                    queryEvents = queryEvents.Where(e => e.EventDate.ToUniversalTime().Date == date.ToUniversalTime().Date);
+                    queryEvents = queryEvents.Where(e => DateOnly.FromDateTime(e.EventDate) == date);
                 }
                 if (!string.IsNullOrEmpty(location))
                 {
-                    queryEvents = queryEvents.Where(e => e.Location.Contains(location));
+                    queryEvents = queryEvents.Where(e => e.Location.ToUpper().Contains(location.ToUpper()));
                 }
                 if (!string.IsNullOrEmpty(category))
                 {
                     queryEvents = queryEvents.Where(e => e.Category.Name.Contains(category));
                 }
 
-                var events = await queryEvents.ToListAsync();
 
-                return events;
+                return await queryEvents.ToListAsync();
 
             }
             catch (Exception ex)

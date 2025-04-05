@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NuGet.Common;
 using System.Net;
 using WebClient.Models;
@@ -44,7 +46,7 @@ namespace WebClient.Controllers
                 {
                     HttpOnly = true,
                     Secure = true,
-                    SameSite = SameSiteMode.None,
+                    Expires = DateTime.Now.AddDays(7),
                     Path = "/"
                 });
                 return RedirectToAction("Index", "Home");
@@ -66,6 +68,23 @@ namespace WebClient.Controllers
             if (response.IsSuccessStatusCode)
             {
                 return RedirectToAction("Login", "Account");
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            var jsonObject = JObject.Parse(content);
+
+            var errors = jsonObject["errors"]?.ToObject<Dictionary<string, List<string>>>();
+
+
+            if (errors != null)
+            {
+                foreach (var error in errors)
+                {
+                    foreach (var errorMessage in error.Value)
+                    {
+                        ModelState.AddModelError(error.Key, errorMessage);
+                    }
+                }
             }
             return View(model);
         }

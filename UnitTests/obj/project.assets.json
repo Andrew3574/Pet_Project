@@ -6914,19 +6914,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\komp\\.nuget\\packages\\": {}
+    "C:\\Users\\komp\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\3course\\TestProject\\UnitTests\\UnitTests.csproj",
+      "projectUniqueName": "D:\\3course\\pet_project\\UnitTests\\UnitTests.csproj",
       "projectName": "UnitTests",
-      "projectPath": "D:\\3course\\TestProject\\UnitTests\\UnitTests.csproj",
+      "projectPath": "D:\\3course\\pet_project\\UnitTests\\UnitTests.csproj",
       "packagesPath": "C:\\Users\\komp\\.nuget\\packages\\",
-      "outputPath": "D:\\3course\\TestProject\\UnitTests\\obj\\",
+      "outputPath": "D:\\3course\\pet_project\\UnitTests\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\komp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Nuget.Config.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6934,18 +6940,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\3course\\TestProject\\Models\\Models.csproj": {
-              "projectPath": "D:\\3course\\TestProject\\Models\\Models.csproj"
+            "D:\\3course\\pet_project\\Models\\Models.csproj": {
+              "projectPath": "D:\\3course\\pet_project\\Models\\Models.csproj"
             },
-            "D:\\3course\\TestProject\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\3course\\TestProject\\Repositories\\Repositories.csproj"
+            "D:\\3course\\pet_project\\Repositories\\Repositories.csproj": {
+              "projectPath": "D:\\3course\\pet_project\\Repositories\\Repositories.csproj"
             }
           }
         }
@@ -6959,7 +6964,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -7002,7 +7008,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

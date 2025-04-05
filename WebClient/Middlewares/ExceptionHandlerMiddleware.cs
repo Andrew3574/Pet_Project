@@ -26,13 +26,19 @@ namespace EventsAPI.Middlewares
 
         private static Task HandleExceptionMessageAsync(HttpContext context,Exception exception)
         {
-            context.Response.ContentType = "application/json";
+            context.Response.ContentType = "text/html";
             int statusCode = (int)HttpStatusCode.InternalServerError;
-            var result = JsonConvert.SerializeObject(new
-            {
-                StatusCode = statusCode,
-                ErrorMessage = "MSG:"+exception.Message + "DATA: "+exception.Data + "SUORCE: "+exception.Source + "HELPLINK: "+exception.HelpLink + "TARGETMETHOD: "+exception.TargetSite
-            });
+            var result = $@"
+                <html>
+                <head>
+                    <title>Error</title>
+                </head>
+                <body>
+                    <h1 class=""text-danger"">Error Occurred</h1>
+                    <p><strong>Status Code:</strong> {statusCode}</p>
+                    <p><strong>Error Message:</strong> MSG: {exception.Message}</p>
+                </body>
+                </html>";
             context.Response.StatusCode = statusCode;
             return context.Response.WriteAsync(result);
         }

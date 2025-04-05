@@ -8,20 +8,16 @@
 
 <h1>Registration</h1>
 <form class="form" method="post">
-    <div asp-validation-summary="ModelOnly"></div>
+    <div asp-validation-summary="All"></div>
     
 
     <input class="input" placeholder="Name" asp-for="Name" /><br />
-    <span asp-validation-for="Name"></span>
 
     <input class="input" placeholder="Surname" asp-for="Surname" /><br />
-    <span asp-validation-for="Surname"></span>
 
     <input class="input" placeholder="BirthDate" asp-for="BirthDate" /><br />
-    <span asp-validation-for="BirthDate"></span>
 
     <input class="input" placeholder="Email" asp-for="Email" /><br />
-    <span asp-validation-for="Email"></span>
 
     <input class="btn" type="submit" value="submit" />
 </form>

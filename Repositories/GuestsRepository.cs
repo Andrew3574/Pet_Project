@@ -19,7 +19,7 @@ namespace Repositories
                 await _dbContext.Guests.AddAsync(entity);
                 await _dbContext.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

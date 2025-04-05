@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FJaNzFok/qI=",
+  "dgSpecHash": "/0s+1tAIVKY=",
   "success": true,
-  "projectFilePath": "D:\\3course\\TestProject\\WebClient\\WebClient.csproj",
+  "projectFilePath": "D:\\3course\\pet_project\\WebClient\\WebClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\komp\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
+    "C:\\Users\\komp\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\komp\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\komp\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\komp\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\komp\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\komp\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

@@ -2,6 +2,8 @@
 using EventsAPI.ModelProfiles;
 using EventsAPI.Models;
 using EventsAPI.Services;
+using EventsAPI.Validators;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
@@ -20,13 +22,15 @@ namespace EventsAPI.Controllers
         private readonly GuestsRepository _guestsRepository;
         private readonly IMapper _mapper;
         private readonly IMemoryCache _memoryCache;
+        private readonly IValidator<RegisterModel> _validator;
 
-        public AccountController(IMapper mapper,IMemoryCache memoryCache, EmailService emailService, GuestsRepository guestsRepository)
+        public AccountController(IMapper mapper,IMemoryCache memoryCache, EmailService emailService, GuestsRepository guestsRepository, IValidator<RegisterModel> validator)
         {
             _mapper = mapper;
             _memoryCache = memoryCache;
             _emailService = emailService;
             _guestsRepository = guestsRepository;
+            _validator = validator;
         }
 
         [HttpPost("request_code")]
@@ -73,12 +77,18 @@ namespace EventsAPI.Controllers
         {
             try
             {
-                 
-                MailAddress mailAddress = new MailAddress(model.Email);
+                var validatorResult = _validator.Validate(model);
 
-                var guest = _mapper.Map<Guest>(model);
-                await _guestsRepository.Create(guest);
-                return Ok("Success registration");
+                if (validatorResult.IsValid)
+                {
+                    MailAddress mailAddress = new MailAddress(model.Email);
+
+                    var guest = _mapper.Map<Guest>(model);
+                    await _guestsRepository.Create(guest);
+                    return Ok("Success registration");
+                }
+                var errors = new HttpValidationProblemDetails(validatorResult.ToDictionary());
+                return BadRequest(errors);
             }
             catch (Exception ex)
             {

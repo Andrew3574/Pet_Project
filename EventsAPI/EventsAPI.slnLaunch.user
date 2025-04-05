@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "EventsAPI.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\WebClient\\WebClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
